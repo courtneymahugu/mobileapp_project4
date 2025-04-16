@@ -38,9 +38,7 @@ struct ContentView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
-            .onChange(of: numberOfPairs) { _ in
-                resetGame()
-            }
+            .onChange(of: numberOfPairs, resetGame)
 
             // Scrollable card grid
             ScrollView {
